@@ -22,7 +22,7 @@ const config = {
     mode: 'production',
     // 声明入口，index.js是入口文件
     // __dirname代表文件所在目录的根目录地址，join是把两个路径拼在一起
-    entry: path.join(__dirname, 'src/index.js'),
+    entry: path.join(__dirname, 'client/index.js'),
     // 声明出口
     output: {
         // filename: 'bundle.js',
@@ -124,7 +124,7 @@ if(isDev) {
     )
 }else {
     config.entry = {
-        app: path.join(__dirname,'src/index'),
+        app: path.join(__dirname,'client/index'),
         vendor: ['vue']
     }
     config.output.filename = '[name].[chunkhash:8].js'
